@@ -61,11 +61,11 @@ From [Wireshark Wiki](http://wiki.wireshark.org/TCP_Analyze_Sequence_Numbers)
 This begs the question, though.  What value should be used for then "sizeof(TCPHDR)" and for the "sizeof(IPHDR)"?
 - There are three reasonable positions to take: the conservative, the moderate, and the liberal.
 The conservative or pessimistic position assumes the worst -- that both the IP header and the TCP header are maximum size, that is, 60 octets each.
-```MSS = MTU - 60 - 60 = MTU - 120```
+- ```MSS = MTU - 60 - 60 = MTU - 120```
 If MTU is 576 then MSS = 456
 The moderate position assumes the that the IP is maximum size (60 octets) and the TCP header is minimum size (20 octets), because there are no TCP header options currently defined that would normally be sent at the same time as data segments.
-```MSS = MTU - 60 - 20 = MTU - 80```
+- ```MSS = MTU - 60 - 20 = MTU - 80```
 If MTU is 576 then MSS = 496
 The liberal or optimistic position assumes the best -- that both the IP header and the TCP header are minimum size, that is, 20 octets each.
-```MSS = MTU - 20 - 20 = MTU - 40```
+- ```MSS = MTU - 20 - 20 = MTU - 40```
 If MTU is 576 then MSS = 536
