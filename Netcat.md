@@ -79,3 +79,16 @@ Now, if we run the netstat command, we see :
 ```bash netstat | grep 2389 tcp6 0 0 localhost:2389 localhost:33234 ESTABLISHED tcp6 0 0 localhost:33234 localhost:2389 ESTABLISHED```
 
 So now a postfix ‘6’ with ‘tcp’ shows that nc is now using IPV6 addresses.
+
+---
+# Reading from STDIN in Netcat
+
+- This functionality can be achieved by using the flag ```-d```. In the following example, we used this flag at the client side.
+
+Server :
+```bash nc -l 2389``` 
+
+Client :
+```bash nc -d localhost 2389 Hi```
+
+The text ‘Hi’ will not be sent to the server end as using ``` -d``` option the read from stdin has been disabled.
