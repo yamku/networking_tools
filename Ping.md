@@ -42,6 +42,8 @@ ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count]
 
 ### Note: The -f, -v, -r, -s, -j, and -k options work when pinging IPv4 addresses only. The -R and -S options only work with IPv6.
 
+---
+
 Other less commonly used switches for the ping command exist including ```[-j host-list], [-k host-list], and [-c compartment]```. Execute ping /? from the Command Prompt for more information on these two options.
 
 *Tip:* Save all of the ping command output to a file using a redirection operator. See How to Redirect Command Output to a File for instructions or see our Command Prompt Tricks list for more tips.
