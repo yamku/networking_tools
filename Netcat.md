@@ -52,3 +52,30 @@ Client :
 The connection above would be terminated after 10 seconds.
 
 NOTE : Do not use the -w flag with -l flag at the server side as in that case -w flag causes no effect and hence the connection remains open forever.
+
+---
+# Netcat Supports IPv6
+
+The flag -4 or -6 specifies that netcat utility should use which type of addresses. -4 forces nc to use IPV4 address while -6 forces nc to use IPV6 address.
+
+Server :
+```bash nc -4 -l 2389```
+Client :
+```bash nc -4 localhost 2389```
+
+Now, if we run the netstat command, we see :
+```bash netstat | grep 2389 tcp 0 0 localhost:2389 localhost:50851 ESTABLISHED tcp 0 0 localhost:50851 localhost:2389 ESTABLISHED```
+
+The first field in the above output would contain a postfix ‘6’ in case the IPV6 addresses are being used. Since in this case it is not, so a connection between server and client is established using IPV4 addresses.
+
+Now, If we force nc to use IPV6 addresses
+
+Server :
+```bash nc -6 -l 2389```
+Client :
+```bash nc -6 localhost 2389```
+
+Now, if we run the netstat command, we see :
+```bash netstat | grep 2389 tcp6 0 0 localhost:2389 localhost:33234 ESTABLISHED tcp6 0 0 localhost:33234 localhost:2389 ESTABLISHED```
+
+So now a postfix ‘6’ with ‘tcp’ shows that nc is now using IPV6 addresses.
