@@ -55,17 +55,17 @@ From [Wireshark Wiki](http://wiki.wireshark.org/TCP_Analyze_Sequence_Numbers)
 # MSS vs MTU
 - The relationship between the value of the maximum IP datagram size and the maximum TCP segment size is obscure.  The problem is that both the IP header and the TCP header may vary in length.  The TCP Maximum Segment Size option (MSS) is defined to specify the maximum number of data octets in a TCP segment exclusive of TCP (or IP) header.
 - To notify the data sender of the largest TCP segment it is possible to receive the calculation of the MSS value to send is:
-- ```MSS = MTU - sizeof(TCPHDR) - sizeof(IPHDR)```
-On receipt of the MSS option the calculation of the size of segment that can be sent is:
-- ```SndMaxSegSiz = MIN((MTU - sizeof(TCPHDR) - sizeof(IPHDR)), MSS)```
+```MSS = MTU - sizeof(TCPHDR) - sizeof(IPHDR)```
+- On receipt of the MSS option the calculation of the size of segment that can be sent is:
+```SndMaxSegSiz = MIN((MTU - sizeof(TCPHDR) - sizeof(IPHDR)), MSS)```
 This begs the question, though.  What value should be used for then "sizeof(TCPHDR)" and for the "sizeof(IPHDR)"?
-There are three reasonable positions to take: the conservative, the moderate, and the liberal.
+- There are three reasonable positions to take: the conservative, the moderate, and the liberal.
 The conservative or pessimistic position assumes the worst -- that both the IP header and the TCP header are maximum size, that is, 60 octets each.
-- ```MSS = MTU - 60 - 60 = MTU - 120```
+```MSS = MTU - 60 - 60 = MTU - 120```
 If MTU is 576 then MSS = 456
 The moderate position assumes the that the IP is maximum size (60 octets) and the TCP header is minimum size (20 octets), because there are no TCP header options currently defined that would normally be sent at the same time as data segments.
-- ```MSS = MTU - 60 - 20 = MTU - 80```
+```MSS = MTU - 60 - 20 = MTU - 80```
 If MTU is 576 then MSS = 496
 The liberal or optimistic position assumes the best -- that both the IP header and the TCP header are minimum size, that is, 20 octets each.
-- ```MSS = MTU - 20 - 20 = MTU - 40```
+```MSS = MTU - 20 - 20 = MTU - 40```
 If MTU is 576 then MSS = 536
