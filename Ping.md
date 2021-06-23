@@ -6,7 +6,7 @@
 ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [-w timeout] [-R] [-S srcaddr] [-p] [-4] [-6] target [/?]
 ```
 ### Ping Switch
-```bash
+```
 -t Using this option will ping the target until you force it to stop using Ctrl-C.
 
 -a This ping command option will resolve, if possible, the hostname of an IP address target.
