@@ -39,3 +39,16 @@ Now, when we see the ‘test’ file at the server end, we see :
 ```bash cat test hello test```
 
 So we see that the file data was transferred from client to server.
+
+---
+# Supports Timeouts
+
+There are cases when we do not want a connection to remain open forever. In that case, through ‘-w’ switch we can specify the timeout in a connection. So after the seconds specified along with -w flag, the connection between the client and server is terminated.
+
+Server :
+```bash nc -l 2389```
+Client :
+```bash nc -w 10 localhost 2389```
+The connection above would be terminated after 10 seconds.
+
+NOTE : Do not use the -w flag with -l flag at the server side as in that case -w flag causes no effect and hence the connection remains open forever.
