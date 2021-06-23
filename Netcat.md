@@ -92,3 +92,32 @@ Client :
 ```bash nc -d localhost 2389 Hi```
 
 The text ‘Hi’ will not be sent to the server end as using ``` -d``` option the read from stdin has been disabled.
+
+---
+# Force Netcat Server to Stay Up
+
+- If the netcat client is connected to the server and then after sometime the client is disconnected then normally netcat server also terminates.
+
+Server :
+```bash nc -l 2389```
+
+Client :
+```bash nc localhost 2389 ^C```
+
+Server :
+```bash nc -l 2389 $```
+
+So, in the above example we see that as soon as the client got disconnected the server was also terminated.
+
+This behavior can be controlled by using the -k flag at the server side to force the server to stay up even after the client has disconnected.
+
+Server :
+```bash nc -k -l 2389```
+
+Client :
+```bash nc localhost 2389 ^C```
+
+Server :
+```bash nc -k -l 2389```
+
+So we see that by using the -k option the server remains up even if the client got disconnected.
