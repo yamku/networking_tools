@@ -5,8 +5,8 @@
 ```bash
 ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [-w timeout] [-R] [-S srcaddr] [-p] [-4] [-6] target [/?]
 ```
- 
-
+### Ping Switch
+```bash
 -t Using this option will ping the target until you force it to stop using Ctrl-C.
 
 -a This ping command option will resolve, if possible, the hostname of an IP address target.
@@ -38,6 +38,7 @@ ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count]
 -6 This forces the ping command to use IPv6 only but as with the -4 option, is only necessary when pinging a hostname. target This is the destination you wish to ping, either an IP address or a hostname.
 
 /? Use the help switch with the ping command to show detailed help about the command's several options.
+```
 
 Note: The -f, -v, -r, -s, -j, and -k options work when pinging IPv4 addresses only. The -R and -S options only work with IPv6.
 
