@@ -1,6 +1,6 @@
 # Netcat or nc
 ---
-_Netcat_ or _nc_ is a networking utility for debugging and investigating the network.
+- _Netcat_ or _nc_ is a networking utility for debugging and investigating the network.
 
 This utility can be used for creating TCP/UDP connections and investigating them. The biggest use of this utility is in the scripts where we need to deal with TCP/UDP sockets.
 In this article we will learn about the _netcat_ command by some practical examples.
@@ -23,7 +23,7 @@ So we see that _netcat_ utility can be used in the client server socket communic
 ---
 # Use Netcat to transfer files
 
-The _netcat_ utility can also be used to transfer files.
+- The _netcat_ utility can also be used to transfer files.
 
 At the client side, suppose we have a file named ‘testfile’ containing :
 ```bash cat testfile hello test```
@@ -43,7 +43,7 @@ So we see that the file data was transferred from client to server.
 ---
 # Supports Timeouts
 
-There are cases when we do not want a connection to remain open forever. In that case, through ‘-w’ switch we can specify the timeout in a connection. So after the seconds specified along with -w flag, the connection between the client and server is terminated.
+- There are cases when we do not want a connection to remain open forever. In that case, through ‘-w’ switch we can specify the timeout in a connection. So after the seconds specified along with -w flag, the connection between the client and server is terminated.
 
 Server :
 ```bash nc -l 2389```
@@ -56,7 +56,7 @@ NOTE : Do not use the -w flag with -l flag at the server side as in that case -w
 ---
 # Netcat Supports IPv6
 
-The flag -4 or -6 specifies that netcat utility should use which type of addresses. -4 forces nc to use IPV4 address while -6 forces nc to use IPV6 address.
+- The flag -4 or -6 specifies that netcat utility should use which type of addresses. -4 forces nc to use IPV4 address while -6 forces nc to use IPV6 address.
 
 Server :
 ```bash nc -4 -l 2389```
