@@ -96,7 +96,9 @@ traceroute -n google.com traceroute to google.com (74.125.235.7), 30 hops max, 6
 
 2 192.241.164.241 2.821 ms 2.743 ms 2.819 ms 3 69.31.95.133 1.470 ms 1.473 ms 1.525 ms
 
+
 If your traceroute dissolves into some asterisks (*), there is a problem with the route to the host.
+
 
 -15 209.85.248.220 (209.85.248.220) 121.809 ms 72.14.239.12 (72.14.239.12) 76.941 ms 209.85.248.220 (209.85.248.220) 78.946 ms
 
@@ -108,3 +110,23 @@ If your traceroute dissolves into some asterisks (*), there is a problem with th
 
 -19 * * *
 ```
+
+---
+
+# What Does a Route Issue Mean?
+
+If your traceroute attempt stops at a particular hop or node and cannot find a route to the host, you have a problem.
+
+While the hop where the route fails to return may be the location of the networking issue, it isn't always that easy to diagnose.
+
+Due to the fact that each ping represents a round-trip packet, and the situation where packets often use different pathways in either direction, it may indicate a problem in a completely different, possibly closer route.
+
+It also may be the case that the problem is with the hop directly after the last hop you see.
+
+It is difficult to diagnose the exact location of the problem unless you can get a return traceroute from that specific hop. This is usually not possible outside of your own network.
+
+Good Reads
+
+[Tutorial: Troubleshooting with Traceroute](https://www.youtube.com/watch?v=WL0ZTcfSvB4)
+
+[How To Use Traceroute and MTR to Diagnose Network Issues](https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues)
