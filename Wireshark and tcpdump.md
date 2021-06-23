@@ -21,3 +21,13 @@ For more information about _tcpdump_ options, run the command:
 ```sh 
 man tcpdump
 ```
+
+Also, tcpdump output can be saved in ‘*.pcap’ file and can be analyzed using Wireshark. To save tcpdump output to a file, use the following command:
+```bash
+sudo tcpdump –ni any –w /<directory>/<filename>.pcap
+```
+
+- Rotating capture window:
+```bash
+sudo tcpdump -i eth0 -w /var/tmp/rotate.pcap -W 3 -C 10 -s 150 &
+```
