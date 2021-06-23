@@ -81,7 +81,7 @@ Now, if we run the netstat command, we see :
 So now a postfix ‘6’ with ‘tcp’ shows that nc is now using IPV6 addresses.
 
 ---
-# Reading from STDIN in Netcat
+# Disable Reading from STDIN in Netcat
 
 - This functionality can be achieved by using the flag ```-d```. In the following example, we used this flag at the client side.
 
