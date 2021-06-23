@@ -125,7 +125,7 @@ It also may be the case that the problem is with the hop directly after the last
 
 It is difficult to diagnose the exact location of the problem unless you can get a return traceroute from that specific hop. This is usually not possible outside of your own network.
 
-Good Reads
+*** Good Reads ***
 
 [Tutorial: Troubleshooting with Traceroute](https://www.youtube.com/watch?v=WL0ZTcfSvB4)
 
