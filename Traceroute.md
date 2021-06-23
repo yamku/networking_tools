@@ -79,10 +79,10 @@ Here is an example of a hop you might see:
 ```3  nyk-b6-link.telia.net (62.115.35.101)  0.311 ms  0.302 ms  0.293 ms```
 
 Here is what each field means:
-    - ```hop_number```: A sequential count of the number of degrees of separation the host is from your computer. Traffic from hosts with higher numbers have to go through more computers to get routed.
-    - ```host_name```: This field contains the result of a reverse DNS lookup on the host's IP address, if available. If no information is returned from the reverse DNS query, the IP address itself is given.
-    - ```IP_address```: This field contains the IP address for this network hop.
-    - ```packetroundtrip_times```: The remainder of the line gives the round-trip times for a packet to the host and back again. By default, three packets are sent to each host and each attempt is appended to the end of the line.
+- ```hop_number```: A sequential count of the number of degrees of separation the host is from your computer. Traffic from hosts with higher numbers have to go through more computers to get routed.
+- ```host_name```: This field contains the result of a reverse DNS lookup on the host's IP address, if available. If no information is returned from the reverse DNS query, the IP address itself is given.
+- ```IP_address```: This field contains the IP address for this network hop.
+- ```packetroundtrip_times```: The remainder of the line gives the round-trip times for a packet to the host and back again. By default, three packets are sent to each host and each attempt is appended to the end of the line.
 
 If you would like to change the number of packets that are tested against each host, you can specify a number with the ```-q``` option, like this:
 traceroute -q1 google.com
