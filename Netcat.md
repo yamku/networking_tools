@@ -59,7 +59,7 @@ So we see that the file data was transferred from client to server.
 ---
 # Supports Timeouts
 
-- There are cases when we do not want a connection to remain open forever. In that case, through ‘-w’ switch we can specify the timeout in a connection. So after the seconds specified along with -w flag, the connection between the client and server is terminated.
+- There are cases when we do not want a connection to remain open forever. In that case, through ```-w``` switch we can specify the timeout in a connection. So after the seconds specified along with ```-w``` flag, the connection between the client and server is terminated.
 
 Server :
 ```bash 
@@ -71,7 +71,7 @@ nc -w 10 localhost 2389
 ```
 The connection above would be terminated after 10 seconds.
 
-NOTE : Do not use the -w flag with -l flag at the server side as in that case -w flag causes no effect and hence the connection remains open forever.
+NOTE : Do not use the -w flag with ```-l``` flag at the server side as in that case ```-w``` flag causes no effect and hence the connection remains open forever.
 
 ---
 # Netcat Supports IPv6
@@ -151,7 +151,7 @@ nc -l 2389 $
 
 So, in the above example we see that as soon as the client got disconnected the server was also terminated.
 
-This behavior can be controlled by using the -k flag at the server side to force the server to stay up even after the client has disconnected.
+This behavior can be controlled by using the ```-k``` flag at the server side to force the server to stay up even after the client has disconnected.
 
 Server :
 ```bash 
@@ -180,3 +180,24 @@ Client should be started like :
 nc -q 5 localhost 2389
 ```
 Now if the client ever receives an EOF then it will wait for 5 seconds before terminating.
+
+---
+
+# Use Netcat with UDP Protocol
+
+- By default all the sockets that nc utility creates are TCP protocols but this utility also works with UDP protocol. To enable UDP protocol the ```-u``` flag is used.
+
+Server :
+```bash
+nc -4 -u -l 2389
+```
+
+Client :
+```bash 
+nc -4 -u localhost 2389
+```
+
+Now, both the server and client are configured to use UDP protocol. This can be confirmed by the following netstat command. So we see that this connection is now using the UDP protocol.
+```bash 
+netstat | grep 2389 udp 0 0 localhost:42634 localhost:2389 ESTABL
+```
