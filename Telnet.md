@@ -3,6 +3,7 @@
 
 Telnet is used most often for remote management but also sometimes for the initial setup for some devices, especially network hardware like switches, access points, etc
 Managing files on a website is also something Telnet is sometimes used for.
+
 ---
 
 ## How Does Telnet Work?
@@ -18,4 +19,5 @@ Telnet commands can also be executed on other operating systems like Linux, Mac,
 
 Telnet is not the same thing as other TCP/IP protocols like HTTP, which just let you transfer files to and from a server. Instead, the Telnet protocol has you log on to a server as if you were an actual user, granting you direct control and all the same rights to files and applications as the user that you're logged in as.
 [Review the Telnet Syntax](https://www.computerhope.com/unix/utelnet.htm)
+
 ---
