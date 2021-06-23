@@ -1,6 +1,6 @@
-Ping Syntax
+# Ping Syntax
 
-Notes
+## Notes
 ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [-w timeout] [-R] [-S srcaddr] [-p] [-4] [-6] target [/?]
 
  
