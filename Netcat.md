@@ -128,5 +128,7 @@ So we see that by using the -k option the server remains up even if the client g
 - Netcat client can be configured to stay up after EOF is received. In a normal scenario, if the ```nc``` client receives an EOF character then it terminates immediately but this behavior can also be controlled if the ```-q``` flag is used. This flag expects a number which depicts number of seconds to wait before client terminates (after receiving EOF)
 
 Client should be started like :
-```bash nc -q 5 localhost 2389```
+```bash 
+nc -q 5 localhost 2389
+```
 Now if the client ever receives an EOF then it will wait for 5 seconds before terminating.
