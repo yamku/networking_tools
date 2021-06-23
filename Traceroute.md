@@ -89,6 +89,7 @@ traceroute -q1 google.com
 
 If you would like to forgo the reverse DNS lookup to speed up the trace, you can pass the -n flag:
 
+```bash 
 traceroute -n google.com traceroute to google.com (74.125.235.7), 30 hops max, 60 byte packets
 
 1 192.241.160.253 0.626 ms 0.598 ms 0.588 ms
@@ -106,3 +107,4 @@ If your traceroute dissolves into some asterisks (*), there is a problem with th
 -18 * * *
 
 -19 * * *
+```
