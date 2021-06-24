@@ -1,6 +1,6 @@
 ### Check for packet loss in intermediate hops
-[diagnosing-network-issues-with-mtr](https://www.linode.com/docs/networking/diagnostics/diagnosing-network-issues-with-mtr/)
-[diagnosing-network-issues-with-mtr-2](http://www.weirdkiwi.com/2014/02/diagnosing-internet-issues-part-two/)
+- [diagnosing-network-issues-with-mtr](https://www.linode.com/docs/networking/diagnostics/diagnosing-network-issues-with-mtr/)
+- [diagnosing-network-issues-with-mtr-2](http://www.weirdkiwi.com/2014/02/diagnosing-internet-issues-part-two/)
 
 # Introduction to MTR:
 
