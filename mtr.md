@@ -10,9 +10,9 @@ For windows there is WinMTR. While it does carry the MTR name, it technically ru
 ## Requirements:
 Here are the downloads for MTR:
 - Windows: This is an .exe file that requires no installation.
-```http
+
 [](http://winmtr.net/)
-```
+
 - Linux: If using Amazon Linux, using sudo yum install mtr should install MTR. Otherwise, the source is below.
 ```http 
 http://www.bitwizard.nl/mtr/
