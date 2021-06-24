@@ -10,13 +10,11 @@ For windows there is WinMTR. While it does carry the MTR name, it technically ru
 ## Requirements:
 Here are the downloads for MTR:
 - Windows: This is an .exe file that requires no installation.
-
-[](http://winmtr.net/)
+[WinMTR](http://winmtr.net/)
 
 - Linux: If using Amazon Linux, using sudo yum install mtr should install MTR. Otherwise, the source is below.
-```http 
-http://www.bitwizard.nl/mtr/
-```
+[MTR](http://www.bitwizard.nl/mtr/)
+
 ## Process/Summary:
 We will start with WinMTR. It is the easier of two to use, however, it also lacks most of the features that MTR itself uses.
 WinMTR works entirely off of a graphical interface. It is pretty straight forward as you will see below. You will just entire the IP of the service you want to Ping and trace route, and click start.
